@@ -1,7 +1,19 @@
 ﻿
 # Online Knowledge Distillation for Image Classification
 
-This project provides source code for our Multi-view contrastive learning for online knowledge distillation (MCL-OKD).
+This project provides source code for official implementation of  Multi-view contrastive learning for online knowledge distillation (MCL-OKD) and unofficial implementations of some representative Online Knowledge Distillation (OKD) methods:
+- `DML`: [Deep mutual learning](https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Deep_Mutual_Learning_CVPR_2018_paper.pdf) (CVPR-2018)
+- `CL-ILR`: [Collaborative learning for deep neural networks](https://proceedings.neurips.cc/paper/2018/file/430c3626b879b4005d41b8a46172e0c0-Paper.pdf) (NeurIPS-2018)
+- `ONE`: [Knowledge distillation by on-the-fly native ensemble](https://papers.nips.cc/paper/2018/file/94ef7214c4a90790186e255304f8fd1f-Paper.pdf) (NeurIPS-2018)
+- `OKDDip`: [Online Knowledge Distillation with Diverse Peers](https://ojs.aaai.org/index.php/AAAI/article/view/5746/5602) (AAAI-2020)
+
+We use some representative image classification networks as the role of backbone for evaluating OKD methods:
+- `ResNet`: [Deep residual learning for image recognition](https://arxiv.org/pdf/1512.03385) (CVPR-2015)
+- `DenseNet`: [Densely connected convolutional networks](https://openaccess.thecvf.com/content_cvpr_2017/papers/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.pdf) (CVPR-2017)
+- `VGG`: [Very deep convolutional networks for large-scale image recognition](https://arxiv.org/pdf/1409.1556) (ICLR-2015)
+- `HCGNet`: [Gated Convolutional Networks with Hybrid Connectivity for Image Classification](https://ojs.aaai.org/index.php/AAAI/article/view/6948/6802) (AAAI-2020)
+
+
 
 ## Installation
 
@@ -74,13 +86,13 @@ python main_cifar_mcl_okd.py --arch mcl_okd_hcgnet_A1 --nce_k 16384 --gpu 0
 ```
 
 
-| Model | FLOPs | Baseline|DML (Ens)|CL-ILR (Ens)|ONE (Ens)|OKDDip (Ens)| MCL-OKD (Ensemble) | 
-| - | - | - |- | - | - | - | - |
-| DenseNet-40-12| 0.07G | 29.17 | 27.34 (26.02) | 27.38 (26.19) | 29.01 (28.67) | 28.75 (27.51) | **26.04 (23.55)** |
-| ResNet-32 |0.07G | 28.91 | 24.92 (22.97)| 25.40 (24.03) | 25.74 (24.03) | 25.76 (23.73) | **24.52 (22.00)** |
-| VGG-16 | 0.31G | 25.18 | 24.14 (23.27) | 23.58 (22.96) | 25.22 (25.12) | 24.86 (24.52) |**23.11 (22.36)** |
-| ResNet-110 | 0.17G | 23.62 | 21.51 (19.12) | 21.16 (18.66) | 22.19 (20.23) | 21.05 (19.40) | **20.39 (18.29)** |
-| HCGNet-A1 | 0.15G | 22.46 | 18.98 (17.86) | 19.04 (18.35) | 22.30 (21.64) | 21.54 (20.97) |**18.72 (17.54)** |
+| Model | Baseline|DML (Ens)|CL-ILR (Ens)|ONE (Ens)|OKDDip (Ens)| MCL-OKD (Ens) | 
+| - | - |- | - | - | - | - |
+| DenseNet-40-12|  29.17 | 27.34 (26.02) | 27.38 (26.19) | 29.01 (28.67) | 28.75 (27.51) | **26.04 (23.55)** |
+| ResNet-32 | 28.91 | 24.92 (22.97)| 25.40 (24.03) | 25.74 (24.03) | 25.76 (23.73) | **24.52 (22.00)** |
+| VGG-16 |  25.18 | 24.14 (23.27) | 23.58 (22.96) | 25.22 (25.12) | 24.86 (24.52) |**23.11 (22.36)** |
+| ResNet-110 | 23.62 | 21.51 (19.12) | 21.16 (18.66) | 22.19 (20.23) | 21.05 (19.40) | **20.39 (18.29)** |
+| HCGNet-A1 | 22.46 | 18.98 (17.86) | 19.04 (18.35) | 22.30 (21.64) | 21.54 (20.97) |**18.72 (17.54)** |
 
 - `Ens` : Ensemble performance with retaining all peer networks.
 
