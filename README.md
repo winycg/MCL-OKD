@@ -1,11 +1,12 @@
 ﻿
-# Online Knowledge Distillation for Image Classification
+# Multi-view contrastive learning for online knowledge distillation
 
 This project provides source code for official implementation of  Multi-view contrastive learning for online knowledge distillation (MCL-OKD) and unofficial implementations of some representative Online Knowledge Distillation (OKD) methods:
 - `DML`: [Deep mutual learning](https://openaccess.thecvf.com/content_cvpr_2018/papers/Zhang_Deep_Mutual_Learning_CVPR_2018_paper.pdf) (CVPR-2018)
 - `CL-ILR`: [Collaborative learning for deep neural networks](https://proceedings.neurips.cc/paper/2018/file/430c3626b879b4005d41b8a46172e0c0-Paper.pdf) (NeurIPS-2018)
 - `ONE`: [Knowledge distillation by on-the-fly native ensemble](https://papers.nips.cc/paper/2018/file/94ef7214c4a90790186e255304f8fd1f-Paper.pdf) (NeurIPS-2018)
 - `OKDDip`: [Online Knowledge Distillation with Diverse Peers](https://ojs.aaai.org/index.php/AAAI/article/view/5746/5602) (AAAI-2020)
+- `MCL-OKD`: Multi-view Contrastive Learning for Online Knowledge Distillation
 
 We use some representative image classification networks as the role of backbone for evaluating OKD methods:
 - `ResNet`: [Deep residual learning for image recognition](https://arxiv.org/pdf/1512.03385) (CVPR-2015)
