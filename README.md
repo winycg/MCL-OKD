@@ -127,7 +127,7 @@ python main_imagenet_baseline.py --arch resnet34 --gpu 0
 python main_imagenet_mcl_okd.py --arch mcl_okd_resnet34 --gpu 0
 ```
 
-| Baseline | MCL-OKD | MCL-OKD (Ens) | 
-| - | - |- |
-| 25.43| 24.64 |**23.26**|
+| Model | Baseline | MCL-OKD | MCL-OKD (Ens) | 
+| - | - | - |- |
+| ResNet-34 | 25.43| 24.64 |**23.26**|
 
