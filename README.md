@@ -131,3 +131,16 @@ python main_imagenet_mcl_okd.py --arch mcl_okd_resnet34 --gpu 0
 | - | - | - |- |
 | ResNet-34 | 25.43| 24.64 |**23.26**|
 
+## Ablation study on CIFAR-100 dataset
+
+| Model | Baseline | +MCL | +MCL+DOT (MCL-OKD) | 
+| - | - | - |- |
+| DenseNet-40-12 | 29.17 | 28.07 |26.04|
+| ResNet-32  | 28.91 | 27.29 |24.52|
+| VGG-16 | 25.18 | 23.86 |23.11|
+| ResNet-110 | 23.62 | 21.65 |20.39|
+| HCGNet-A1 |  22.46 | 20.76 |18.72|
+
+- `MCL` : The loss of Multi-view Contrastive Learning
+
+- `DOT` : The loss of Distillation from an Online Teacher
